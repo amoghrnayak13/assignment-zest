@@ -22,7 +22,7 @@ public class WriteAReview  extends BrowserConfigurations{
 		TripAdvWritingReviewPage tripWritingReviewPage = new TripAdvWritingReviewPage(driver);
 		
 		tripAdvisorPage.enterSearchDetailsonAmazon(TripAdvisorSearchData.clubMahindra);
-		String parentHandle = this.driver.getWindowHandle();
+	//	String parentHandle = this.driver.getWindowHandle();
 
 		tripSrchResultPage.clickFirstResult();
 		for (String winHandle : driver.getWindowHandles()) {
