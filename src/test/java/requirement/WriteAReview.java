@@ -3,6 +3,7 @@ package requirement;
 import org.testng.annotations.Test;
 
 import configurations.BrowserConfigurations;
+import data.TripAdvisorReviewData;
 import data.TripAdvisorSearchData;
 import pages.TripAdvSearchResults;
 import pages.TripAdvWritingReviewPage;
@@ -34,9 +35,9 @@ public class WriteAReview  extends BrowserConfigurations{
 			this.driver.switchTo().window(winHandle);
 			
 		}
-		
-		tripWritingReviewPage.mouseOverOnRating();
-		
+		tripWritingReviewPage.enterReviewTitle(TripAdvisorReviewData.reviewTitle)
+		                     .enterReview(TripAdvisorReviewData.review)
+		                     .mouseOverOnRating();
 		
 	}
 
