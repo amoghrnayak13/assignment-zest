@@ -42,8 +42,8 @@ public class HomePage {
 	}
 
 	public String getSearchedPhonePriceonAmazon()  throws Exception {
-        
-		List<WebElement> myList= driver.findElements(By.xpath("//span[text()='₹']/following::span[contains(text(),'')][1]"));
+
+		List<WebElement> myList= driver.findElements(By.xpath("//span[contains(text(),'Choice')]/preceding-sibling::span/parent::span/ancestor::a/parent::span/../../following::div/a/span/span/span[text()='₹']/following::span[1]"));////span[text()='₹']/following::span[contains(text(),'')][1]"
 		List<String> all_elements_text=new ArrayList<String>();
 
 		for(int i=0; i<myList.size(); i++){
@@ -52,7 +52,7 @@ public class HomePage {
 			all_elements_text.add(myList.get(i).getText());
 
 
-			//	System.out.println(myList.get(0).getText());
+			//System.out.println(myList.get(0).getText());
 		}
 		return myList.get(0).getText();
 	}
