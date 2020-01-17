@@ -25,6 +25,9 @@ public class SearchPriceOfThePhone extends BrowserConfigurations{
 		        .enterSearchDetailsonAmazon(HomeData.iphoneXR);
 
 		valueOfIphoneOnAmazon= homePage.getSearchedPhonePriceonAmazon();//For this function we can even add the Sorting
+	
+		homePage.verifyIphoneXRModelIsSearchedonAmazon();
+
 		valueOfIphoneOnAmazon = valueOfIphoneOnAmazon.replaceAll("[^a-zA-Z0-9]","");// Using Regular exp to remove special chars
 		
 		System.out.println(valueOfIphoneOnAmazon); 
@@ -43,6 +46,8 @@ public class SearchPriceOfThePhone extends BrowserConfigurations{
 		        .enterSearchDetailsonFlipkart(HomeData.iphoneXR);
 		
 		String value = homePage.getSearchedPhonePriceonFlipkart();//For this function we can even add the Sorting
+		
+		homePage.verifyIphoneXRModelIsSearchedonFlipkart();
 	
 		valueOfIphoneOnFlipKart = value.substring(1);  
 		valueOfIphoneOnFlipKart = valueOfIphoneOnFlipKart.replaceAll("[^a-zA-Z0-9]","");// Using Regular exp to remove special chars;

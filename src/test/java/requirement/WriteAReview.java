@@ -35,12 +35,10 @@ public class WriteAReview  extends BrowserConfigurations{
 			this.driver.switchTo().window(winHandle);
 			
 		}
-		
-		  tripWritingReviewPage.enterReviewTitle(TripAdvisorReviewData.reviewTitle)
-		                       .enterReview(TripAdvisorReviewData.review) 
-		                     //.mouseOverOnRating()
-		                       .clickSubmit();
-		 
+		tripWritingReviewPage.mouseOverOnRating()
+		                     .enterReviewTitle(TripAdvisorReviewData.reviewTitle)
+		                     .enterReview(TripAdvisorReviewData.review) 
+		                     .clickSubmit();
 		
 	}
 

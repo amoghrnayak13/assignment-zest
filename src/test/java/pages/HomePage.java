@@ -84,7 +84,7 @@ public class HomePage {
 
 	public String getSearchedPhonePriceonFlipkart()  throws Exception {
 
-		List<WebElement> myList= driver.findElements(By.xpath("//div[@class='_1vC4OE _2rQ-NK']"));
+		List<WebElement> myList= driver.findElements(By.xpath("//div[contains(text(),'Apple iPhone XR ')]/parent::div/following::div/div[@class='_1vC4OE _2rQ-NK']"));
 		//List<String> all_elements_text=new ArrayList<String>();
 
 		for(int i=0; i<myList.size(); i++){
@@ -92,6 +92,32 @@ public class HomePage {
 			//System.out.println(myList.get(0).getText());
 		}
 		return myList.get(0).getText();
+	}
+	
+	public HomePage verifyIphoneXRModelIsSearchedonFlipkart()  throws Exception {
+
+		driver.findElement(By.xpath("//div[contains(text(),'Apple iPhone XR ')]/parent::div/following::div/div[@class='_1vC4OE _2rQ-NK']")).click();
+		for (String winHandle : driver.getWindowHandles()) {
+			this.driver.switchTo().window(winHandle);
+			
+		}
+		String modelName = driver.findElement(By.xpath("//span[contains(text(),'Apple iPhone XR')]")).getText();
+		assertTrue(modelName.contains("Apple iPhone XR"));
+		return this;
+		
+	}
+	
+	public HomePage verifyIphoneXRModelIsSearchedonAmazon()  throws Exception {
+
+		driver.findElement(By.xpath("//span[contains(text(),'Choice')]/preceding-sibling::span/parent::span/ancestor::a/parent::span/../../following::div/a/span/span/span[text()='₹']/following::span[1]")).click();
+		for (String winHandle : driver.getWindowHandles()) {
+			this.driver.switchTo().window(winHandle);
+			
+		}
+		String modelName = driver.findElement(By.xpath("//span[@id='productTitle']")).getText();
+		assertTrue(modelName.contains("Apple iPhone XR"));
+		return this;
+		
 	}
 
 }
