@@ -4,6 +4,7 @@ public class TripAdvisorWritingReviewLocators {
 	
 	public static String reviewTitle ="ReviewTitle",
 			             review = "ReviewText",
-			             submit = "SUBMIT";
+			             submit = "SUBMIT",
+			             submitCheckBox = "noFraud";
 
 }

@@ -38,8 +38,12 @@ public class WriteAReview  extends BrowserConfigurations{
 		tripWritingReviewPage.mouseOverOnRating()
 		                     .enterReviewTitle(TripAdvisorReviewData.reviewTitle)
 		                     .enterReview(TripAdvisorReviewData.review) 
+		                     .selectCheckBox()
+		                     .verifyWhetherHotelRatingIsAvailable() //Not hovering properly yet,,,i will be fixing this
 		                     .clickSubmit();
 		
 	}
+	
+	// page is loading very slowly,, if fails before last step, please rerun.
 
 }
