@@ -17,6 +17,7 @@ public class WriteAReview  extends BrowserConfigurations{
 		String URL = "https://www.tripadvisor.in";
 		
 		driver.get(URL);
+		driver.manage().deleteAllCookies();
 		
 		TripAdvisorHomePage tripAdvisorPage = new TripAdvisorHomePage(driver);
 		TripAdvSearchResults tripSrchResultPage = new TripAdvSearchResults(driver);
@@ -41,7 +42,6 @@ public class WriteAReview  extends BrowserConfigurations{
 		                     .selectCheckBox()
 		                     .verifyWhetherHotelRatingIsAvailable() //Not hovering properly yet,,,i will be fixing this
 		                     .clickSubmit();
-		
 	}
 	
 	// page is loading very slowly,, if fails before last step, please rerun.

@@ -84,7 +84,7 @@ public class HomePage {
 
 	public String getSearchedPhonePriceonFlipkart()  throws Exception {
 
-		List<WebElement> myList= driver.findElements(By.xpath("//div[contains(text(),'Apple iPhone XR ')]/parent::div/following::div/div[@class='_1vC4OE _2rQ-NK']"));
+		List<WebElement> myList= driver.findElements(By.xpath("//a[contains(text(),'Apple iPhone XR')]/parent::div/a[@class='_1Vfi6u']/div/div[contains(text(),'₹')]"));
 		//List<String> all_elements_text=new ArrayList<String>();
 
 		for(int i=0; i<myList.size(); i++){
@@ -96,7 +96,7 @@ public class HomePage {
 	
 	public HomePage verifyIphoneXRModelIsSearchedonFlipkart()  throws Exception {
 
-		driver.findElement(By.xpath("//div[contains(text(),'Apple iPhone XR ')]/parent::div/following::div/div[@class='_1vC4OE _2rQ-NK']")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Apple iPhone XR')]/parent::div/a[@class='_1Vfi6u']/div/div[contains(text(),'₹')]")).click();
 		for (String winHandle : driver.getWindowHandles()) {
 			this.driver.switchTo().window(winHandle);
 			

@@ -8,7 +8,7 @@ import pages.HomePage;
 import pages.Utilities;
 
 
-//To run the test cases please right clikc on the class file and select Runas>>TestNg
+//To run the test cases please right click on the class file and select Runas>>TestNg
 public class SearchPriceOfThePhone extends BrowserConfigurations{
 	
 	String valueOfIphoneOnAmazon,
@@ -28,7 +28,7 @@ public class SearchPriceOfThePhone extends BrowserConfigurations{
 	
 		homePage.verifyIphoneXRModelIsSearchedonAmazon();
 
-		valueOfIphoneOnAmazon = valueOfIphoneOnAmazon.replaceAll("[^a-zA-Z0-9]","");// Using Regular exp to remove special chars
+		valueOfIphoneOnAmazon = valueOfIphoneOnAmazon.replaceAll("[^a-zA-Z0-9]","");// Using Regular expression to remove special chars
 		
 		System.out.println(valueOfIphoneOnAmazon); 
 		}
@@ -41,7 +41,7 @@ public class SearchPriceOfThePhone extends BrowserConfigurations{
 		String flipKartURL = "https://www.flipkart.com";
 
 		driver.get(flipKartURL);
-
+        driver.manage().deleteAllCookies();
 		homePage.verifyFlipkartHomePageIsDisplayed()
 		        .enterSearchDetailsonFlipkart(HomeData.iphoneXR);
 		
@@ -50,7 +50,7 @@ public class SearchPriceOfThePhone extends BrowserConfigurations{
 		homePage.verifyIphoneXRModelIsSearchedonFlipkart();
 	
 		valueOfIphoneOnFlipKart = value.substring(1);  
-		valueOfIphoneOnFlipKart = valueOfIphoneOnFlipKart.replaceAll("[^a-zA-Z0-9]","");// Using Regular exp to remove special chars;
+		valueOfIphoneOnFlipKart = valueOfIphoneOnFlipKart.replaceAll("[^a-zA-Z0-9]","");// Using Regular expression to remove special chars;
 	
 		System.out.println(valueOfIphoneOnFlipKart);
 		
