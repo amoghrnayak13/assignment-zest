@@ -6,5 +6,4 @@ public class TripSearchResultLocator {
 			             writeAReview = "//a[text()='Write a review']",
 			             enterReviewTitle = "ReviewTitle",
 			             review = "ReviewText";
-
 }

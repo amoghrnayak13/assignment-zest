@@ -18,5 +18,4 @@ public class Utilities {
 			System.out.println("On Flipkart price is lesser");
 		}
 	}
-
 }

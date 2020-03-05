@@ -66,5 +66,4 @@ public class SearchPriceOfThePhone extends BrowserConfigurations{
 		
 		utilitiesPage.compareTwoValues(valueOnAmazon, valueOnFlipkart);
 	}
-	
 }

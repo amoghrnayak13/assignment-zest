@@ -6,5 +6,4 @@ public class TripAdvisorWritingReviewLocators {
 			             review = "ReviewText",
 			             submit = "SUBMIT",
 			             submitCheckBox = "noFraud";
-
 }

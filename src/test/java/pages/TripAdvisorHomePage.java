@@ -26,7 +26,7 @@ public class TripAdvisorHomePage {
 
 		this.clickSearchBuuton();
 		driver.findElement(By.xpath(TripAdvisorHomeLocators.mainsearch)).sendKeys(detail);
-		driver.findElement(By.id(TripAdvisorHomeLocators.searchButton)).click();
+		driver.findElement(By.xpath(TripAdvisorHomeLocators.searchButton)).click();
 		return this;
 
 	}

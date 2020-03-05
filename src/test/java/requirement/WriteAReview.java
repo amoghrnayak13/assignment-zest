@@ -40,7 +40,7 @@ public class WriteAReview  extends BrowserConfigurations{
 		                     .enterReviewTitle(TripAdvisorReviewData.reviewTitle)
 		                     .enterReview(TripAdvisorReviewData.review) 
 		                     .selectCheckBox()
-		                     .verifyWhetherHotelRatingIsAvailable() //Not hovering properly yet,,,i will be fixing this
+		                     .verifyWhetherHotelRatingIsAvailable() //Partial hovering,,,i will be fixing this
 		                     .clickSubmit();
 	}
 	

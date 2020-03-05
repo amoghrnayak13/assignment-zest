@@ -21,11 +21,12 @@ public class TripAdvWritingReviewPage {
 
 		Actions action = new Actions(driver);
 		WebElement w0 = driver.findElement(By.xpath("//span[@id='bubble_rating']"));
-		WebElement w1 = driver.findElement(By.xpath("//span[@class='ui_bubble_rating fl bubble_00']"));
-		action.moveToElement(w0).moveToElement(w1).click().build().perform();
+		//WebElement w1 = driver.findElement(By.xpath("//span[@class='ui_bubble_rating fl bubble_00']"));
+	//	action.moveToElement(w0).moveToElement(w1).click().build().perform();
+		action.moveToElement(w0,50,0).perform();
 
-		WebElement w2 =driver.findElement(By.xpath("//span[@class='ui_bubble_rating fl bubble_30']"));
-		action.moveToElement(w2,50,0).perform();
+	//	WebElement w2 =driver.findElement(By.xpath("//span[@class='ui_bubble_rating fl bubble_30']"));
+	//	action.moveToElement(w2,50,0).perform();
 	//	WebElement w3 =driver.findElement(By.xpath("//span[@class='ui_bubble_rating fl bubble_50']")); 
 		return this;
 

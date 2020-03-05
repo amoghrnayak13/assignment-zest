@@ -16,7 +16,7 @@ public class BrowserConfigurations {
 		//ChromeDriver 79 version has been used.
 		System.setProperty("webdriver.chrome.driver", System.getProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe"));
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
 		//driver.get(URL);

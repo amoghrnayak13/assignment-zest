@@ -32,7 +32,6 @@ public class HomePage {
 		return this;
 
 	}
-
 	public HomePage enterSearchDetailsonAmazon(String detail)  throws Exception {
 
 		driver.findElement(By.id(HomeLocators.searchBoxAmazon)).sendKeys(detail);

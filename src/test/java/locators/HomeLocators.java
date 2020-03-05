@@ -9,5 +9,4 @@ public class HomeLocators {
 			             searchBoxFlipkart = "//input[@title='Search for products, brands and more']",
 			             searchIconFlipkart = "//button[@type='submit']",
 			             flipkartLoginPopup = "//button[@class='_2AkmmA _29YdH8']";
-
 }
